@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/projectClient/static/css/main.32152f1e.css",
+    "main.js": "/projectClient/static/js/main.6446ae57.js",
+    "static/media/testImageAvatar.jpg": "/projectClient/static/media/testImageAvatar.f6fc84e11276aad62a89.jpg",
+    "static/media/vk_logo.png": "/projectClient/static/media/vk_logo.5f04f8116f4138ee911f.png",
+    "index.html": "/projectClient/index.html",
+    "main.32152f1e.css.map": "/projectClient/static/css/main.32152f1e.css.map",
+    "main.6446ae57.js.map": "/projectClient/static/js/main.6446ae57.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.32152f1e.css",
+    "static/js/main.6446ae57.js"
+  ]
+}
