@@ -25,7 +25,7 @@ const App = observer(() => {
     }
 
     return (
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.REACT_APP_BASE_URL}>
             <Layout>
                 <AppRouter/>
             </Layout>
