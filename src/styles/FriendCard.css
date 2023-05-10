@@ -1,0 +1,19 @@
+@import "index.css";
+
+.friendCard__main {
+    height: 150px;
+    background-color:  #312b2b;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 450px;
+    border-radius: 40px;
+}
+
+.friendCard__image {
+    border-radius: 50%;
+}
+
+.friendCard__friendName {
+    color: white;
+}

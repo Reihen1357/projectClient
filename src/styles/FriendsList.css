@@ -1,0 +1,48 @@
+@import "index.css";
+
+.friendsList__main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.friendsList__container {
+    background-color: #2b2b2b;
+    width: 450px;
+    padding: 25px;
+    border-radius: 40px;
+    margin-top: 20px;
+}
+
+.friendsList__header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.friendsList__header-searchFriends {
+    padding: 4px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.friendsList__header-searchFriends:hover {
+    background-color: #cecbcb;
+}
+
+.friendsList__header-myFriends {
+    color: white;
+}
+
+.friendList__searchYourFriendContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.friendsList__searchYourFriend {
+    padding: 4px;
+    margin-top: 10px;
+}
+
+
+

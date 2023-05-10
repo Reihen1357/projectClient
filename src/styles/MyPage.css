@@ -1,0 +1,58 @@
+@import "index.css";
+
+.MyPage__main {
+    height: 100vh;
+    background-color: #222222;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.MyPage__container {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.MyPage__header, .MyPage__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 40px;
+    padding: 30px;
+}
+
+.MyPage__header {
+    background: #2b2b2b;
+}
+
+.MyPage__image {
+    width: 350px;
+    height: 450px;
+}
+
+.MyPage__name, .MyPage__surname, .MyPage__age, .MyPage__city, .MyPage__university {
+    margin-top: 20px;
+}
+
+.MyPage__content-posts {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.MyPage__content {
+    margin-top: 20px;
+}
+
+.MyPage__addPost {
+    padding: 4px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.MyPage__addPost:hover {
+    background-color: #cecbcb;
+}
