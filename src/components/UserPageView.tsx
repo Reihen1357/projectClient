@@ -1,6 +1,5 @@
 import React, { FC, useEffect, useState } from "react";
 import "../styles/UserPageView.css";
-import testImage from "../assets/testImageAvatar.jpg";
 import { IPost, IUserInfo } from "../types/types";
 import { getByUserId } from "../Api/PostApi";
 import Card from "./Card";
@@ -10,6 +9,10 @@ interface UserPageViewProps {
 }
 
 const UserPageView: FC<UserPageViewProps> = ({ userInfo }) => {
+  const imagePath = new URL(
+    userInfo.image,
+    new URL(process.env.REACT_APP_API_URL ?? "").origin
+  ).href;
   const [posts, setPosts] = useState<IPost[]>([]);
 
   useEffect(() => {
@@ -31,7 +34,7 @@ const UserPageView: FC<UserPageViewProps> = ({ userInfo }) => {
       <div className="UserPageView__container">
         <div className="UserPageView__header">
           <img
-            src={testImage}
+            src={imagePath}
             alt="AvatarImage"
             className="UserPageView__image"
           />
