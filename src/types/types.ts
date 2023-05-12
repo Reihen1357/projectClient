@@ -12,6 +12,10 @@ export interface IUser {
 
 export type IRegistrationRequest = Omit<IUser, "id">;
 
+export interface IUserModal extends Omit<IUser, "password" | "email"> {
+  isFriend?: boolean;
+}
+
 export interface IUserInfo extends Omit<IUser, "password"> {
   isPersonalPage: boolean;
 }

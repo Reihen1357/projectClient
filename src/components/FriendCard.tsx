@@ -1,19 +1,30 @@
 import React, { FC, MouseEvent } from "react";
 import "../styles/FriendCard.css";
-import { IUser } from "../types/types";
-import { deleteFriend } from "../Api/FriendApi";
+import { IUserModal } from "../types/types";
+import { addFriend, deleteFriend } from "../Api/FriendApi";
 import { useNavigate } from "react-router-dom";
 
 interface FriendCardProps {
-  friend: IUser;
+  friend: IUserModal;
   onFriendDelete: (friendId: number) => void;
+  onFriendAdd: (friendId: number) => void;
 }
 
-const FriendCard: FC<FriendCardProps> = ({ friend, onFriendDelete }) => {
+const FriendCard: FC<FriendCardProps> = ({
+  friend,
+  onFriendDelete,
+  onFriendAdd,
+}) => {
   const navigate = useNavigate();
   const openUserPage = () => {
     navigate(`/${friend.id}`);
   };
+
+  const handleAddFriend = (event: MouseEvent<HTMLButtonElement>) => {
+    event.stopPropagation();
+    addFriend(friend.id).then(() => onFriendAdd(friend.id));
+  };
+
   const handleDeleteFriend = (event: MouseEvent<HTMLButtonElement>) => {
     event.stopPropagation();
     deleteFriend(friend.id).then(() => onFriendDelete(friend.id));
@@ -29,12 +40,21 @@ const FriendCard: FC<FriendCardProps> = ({ friend, onFriendDelete }) => {
         className="friendCard__image"
       />
       <div className="friendCard__friendName">{`${friend.name} ${friend.surname}`}</div>
-      <button
-        onClick={handleDeleteFriend}
-        className="friendCard__deleteFriend"
-      >
-        Удалить из друзей
-      </button>
+      {friend.isFriend === false ? (
+        <button
+          onClick={handleAddFriend}
+          className="friendCard__addFriend"
+        >
+          Добавить в друзья
+        </button>
+      ) : (
+        <button
+          onClick={handleDeleteFriend}
+          className="friendCard__deleteFriend"
+        >
+          Удалить из друзей
+        </button>
+      )}
     </div>
   );
 };

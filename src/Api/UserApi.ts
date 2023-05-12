@@ -4,6 +4,7 @@ import {
   ITokenResponse,
   IUser,
   IUserInfo,
+  IUserModal,
 } from "../types/types";
 import jwtDecode from "jwt-decode";
 
@@ -39,7 +40,7 @@ export const info = async (userId: number) => {
 };
 
 export const searchUsers = async (name: string, surname: string) => {
-  const response = await authClient.get<IUser[]>(
+  const response = await authClient.get<IUserModal[]>(
     `user/find?name=${name}&surname=${surname}`
   );
   return response.data;
