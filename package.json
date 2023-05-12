@@ -2,7 +2,7 @@
   "name": "socailnetforvk",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Reihen1357.gitgub.io/projectClient",
+  "homepage": "https://Reihen1357.gitgub.io/projectClient/#",
   "type": "module",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",

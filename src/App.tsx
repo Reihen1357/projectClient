@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import AppRouter from "../src/routes/AppRouter";
 import { Context } from "./index";
 import { check } from "./Api/UserApi";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import { observer } from "mobx-react-lite";
 
 const App = observer(() => {
@@ -25,9 +25,9 @@ const App = observer(() => {
   }
 
   return (
-    <BrowserRouter basename={process.env.REACT_APP_BASE_URL}>
+    <HashRouter>
       <AppRouter />
-    </BrowserRouter>
+    </HashRouter>
   );
 });
 
